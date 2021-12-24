@@ -22,7 +22,7 @@ The smart contract allows you to upload a CID with the `register` function.
 Using `ethers`
 
 ```
-const provider = new ether.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/${infuraId`);
+const provider = new ether.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/${infuraId}`);
     const wallet = new ether.Wallet(key, provider);
     const contract = new ether.Contract(address, abi, wallet);
 
@@ -51,7 +51,7 @@ Contract Interaction using `web3`
 const Web3 = require('web3');
 const abi = require('../../abi/abi.json').abi;
 const address = "0x1dC2305F2C96172027c1A4E56df1FfB1D2B225b2"
-const web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/v3/0b5684a2dfdb41bfaf72e29ecc001ced"));
+const web3 = new Web3(new Web3.providers.HttpProvider(`https://rinkeby.infura.io/v3/${infuraId}`));
 
 //get the address that uploaded a cid
 async function getCidOwner(cid: string){
