@@ -1,0 +1,42 @@
+{
+  "name": "ipfs_registry",
+  "version": "1.0.0",
+  "description": "A command line tool to upload files to IPFS and store in a smart contract",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc",
+    "local": "sudo npm i -g && registry-cli",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "test": "mocha --timeout 50000"
+  },
+  "keywords": [],
+  "author": "Jelilat Anofiu",
+  "license": "ISC",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^2.1.8",
+    "chai": "^4.3.4",
+    "chalk": "^5.0.0",
+    "clear": "^0.1.0",
+    "commander": "^8.3.0",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.5.2",
+    "figlet": "^1.5.2",
+    "fs": "^0.0.1-security",
+    "hardhat": "^2.8.0",
+    "ipfs-core": "^0.13.0",
+    "path": "^0.12.7",
+    "web3": "^1.6.1",
+    "web3-eth-contract": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^17.0.4",
+    "chai-bignumber": "^3.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
